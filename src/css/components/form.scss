@@ -1,0 +1,135 @@
+.order-section {
+    position: relative;
+    background: url(../img/decor/bg-order.jpg);
+
+    &::before {
+        position: absolute;
+        right: 0;
+        top: -160px;
+        content: url(../img/decor/berries-leaf-2.png)
+    }
+}
+
+.form {
+    display: flex;
+
+    &:before {
+        position: absolute;
+        content: url(../img/decor/berries-1.png);
+        left: -25px;
+        bottom: -12px;
+    }
+
+    &:after {
+        position: absolute;
+        content: url(../img/decor/leaf.png);
+        right: -25px;
+        bottom: -30px;
+    }
+
+    @include tablets {
+        flex-direction: column;
+        padding: 0 19%;
+
+        &:before {
+            display: none;
+        }
+        
+        &:after {
+            display: none;
+        }
+    }
+    
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__col {
+    flex: 1;
+    margin-right: 25px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 22px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 15px;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include tablets {
+        margin-bottom: 20px;
+    }
+}
+
+.form__block {
+    flex: 1;
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    width: 100%;
+    padding: 16px 11px;
+    border: solid 3px transparent;
+    border-radius: 5px;
+
+    @include tablets {
+        padding: 6px 7px;
+    }
+
+    &--textarea {
+        height: 153px;
+        resize: none;
+
+        @include tablets {
+            height: 85px;
+        }
+    }
+
+    &:focus {
+        border-color: #dee2bd;
+        outline: none;
+    }
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include phones {
+        justify-content: center;
+        margin-bottom: 0;
+    }
+}
+
+.form__btns {
+    margin-top: 44px;
+    
+    @include tablets {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.input-error {
+    border-color: hotpink;
+}

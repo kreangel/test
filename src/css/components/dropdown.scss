@@ -1,0 +1,73 @@
+.dropdown {
+    display: flex;
+    position: relative;
+}
+
+.dropdown__menu {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    left: 100px;
+    position: absolute;
+
+    &:hover {
+        display: block;
+    }
+}
+
+.product__ingredients:hover {
+
+    &+.dropdown__menu {
+        display: block;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        height: 200px;
+        width: 100px;
+        left: 0px;
+        top: 100px;
+        position: absolute;
+    }
+}
+
+.dropdown__list {
+    display: flex;
+    padding: 20px;
+}
+
+.dropdown__item {
+    margin-right: 20px;
+}
+
+.dropdown__svg {
+    width: 40px;
+    height: 40px;
+}
+
+
+.dropdown__item--img {
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.dropdown__item--text {
+    margin-bottom: 25px;
+    white-space: nowrap;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.dropdown__item--mass {
+    text-align: right;
+    margin-bottom: 25px;
+    white-space: nowrap;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
